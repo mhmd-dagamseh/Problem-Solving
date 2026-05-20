@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
-int readPossitiveNumber(string Message) 
+int readPositiveNumber(string Message)
 {
-   int Number;
-   do
-   {
-      cout << Message;
-      cin >> Number;
-   } while (Number <= 0);
-   return Number;
+    int Number;
+    cout << Message << " : ";
+    cin >> Number;
+    if (Number <= 0)
+    {
+        while (Number <= 0)
+        {
+            cout << "Wrong, " << Message << " Again! : ";
+            cin >> Number;
+        }
+    }
+    return Number;
 }
 bool isPerfect(int Number) 
 {
@@ -37,6 +42,6 @@ void printResultsFrom_OneToN(int Number)
 }
 int main()
 {
-   int Number = readPossitiveNumber("Enter A Possitive Number : ");
+   int Number = readPositiveNumber("Enter A Possitive Number : ");
    printResultsFrom_OneToN(Number);
 }

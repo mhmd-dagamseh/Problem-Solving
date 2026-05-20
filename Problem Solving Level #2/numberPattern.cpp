@@ -4,11 +4,16 @@ using namespace std;
 int readPositiveNumber(string Message)
 {
     int Number;
-    do
+    cout << Message << " : ";
+    cin >> Number;
+    if (Number <= 0)
     {
-        cout << Message;
-        cin >> Number;
-    } while (Number <= 0);
+        while (Number <= 0)
+        {
+            cout << "Wrong, " << Message << " Again! : ";
+            cin >> Number;
+        }
+    }
     return Number;
 }
 void printNumberPattern(int Number) 

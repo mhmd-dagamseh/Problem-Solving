@@ -1,14 +1,19 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int readPossitiveNumber(string Message)
+int readPositiveNumber(string Message)
 {
     int Number;
-    do
+    cout << Message << " : ";
+    cin >> Number;
+    if (Number <= 0)
     {
-        cout << Message;
-        cin >> Number;
-    } while (Number <= 0);
+        while (Number <= 0)
+        {
+            cout << "Wrong, " << Message << " Again! : ";
+            cin >> Number;
+        }
+    }
     return Number;
 }
 void printReversedNumber (int Number)
@@ -26,6 +31,6 @@ void printReversedNumber (int Number)
 
 int main()
 {
-   int Number = readPossitiveNumber("Enter A Positiv Number : ");
+   int Number = readPositiveNumber("Enter A Positiv Number : ");
    printReversedNumber (Number);
 }

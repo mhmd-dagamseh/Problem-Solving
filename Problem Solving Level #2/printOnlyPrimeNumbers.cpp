@@ -5,16 +5,20 @@ enum primeNumbers{
    Prime = 1,
    notPrime = 2,
 };
-int readPossitiveNumber(string Message) 
-
+int readPositiveNumber(string Message)
 {
-   int Number;
-   do
-   {
-      cout << " Wrong Entering, Try Input Possitive Number : ";
-      cin >> Number;
-   } while (Number < 0);
-   return Number;
+    int Number;
+    cout << Message << " : ";
+    cin >> Number;
+    if (Number <= 0)
+    {
+        while (Number <= 0)
+        {
+            cout << "Wrong, " << Message << " Again! : ";
+            cin >> Number;
+        }
+    }
+    return Number;
 }
 primeNumbers checkPrimeNumbers(int Number) 
 {
@@ -42,6 +46,6 @@ void printPrimeNumbers(int Number)
 
 int main () 
 {
-   int Number = readPossitiveNumber("Enter A Possitive Number Please : ");
+   int Number = readPositiveNumber("Enter A Possitive Number Please : ");
    printPrimeNumbers(Number);
 }
