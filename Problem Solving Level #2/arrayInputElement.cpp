@@ -1,21 +1,8 @@
 #include <iostream>
 #include <vector>
+#include "myLibrary.h"
 using namespace std;
-int readPositiveNumber(string Message)
-{
-    int Number;
-    cout << Message << " : ";
-    cin >> Number;
-    if (Number <= 0)
-    {
-        while (Number <= 0)
-        {
-            cout << "Wrong, " << Message << " Again! : ";
-            cin >> Number;
-        }
-    }
-    return Number;
-}
+
 vector<int> inputArrElement(int sizeNumber) {
     vector<int> arr;
     for (int i = 0;i < sizeNumber; i++)

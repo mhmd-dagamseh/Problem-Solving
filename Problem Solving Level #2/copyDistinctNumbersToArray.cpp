@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-
+#include "myLibrary.h"
 using namespace std;
 void fillingArray(int arr[], int& arrLength)
 {

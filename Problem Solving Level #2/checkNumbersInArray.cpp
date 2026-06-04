@@ -2,22 +2,8 @@
 #include<string>
 #include <cstdlib>
 #include <ctime>
+#include "myLibrary.h"
 using namespace std;
-int readPositiveNumber(string Message)
-{
-      int Number;
-      cout << Message << " : ";
-      cin >> Number;
-      if (Number <= 0 || Number > 100)
-      {
-         while (Number <= 0 || Number > 100)
-         {
-            cout << "Wrong, " << Message << " Again! : ";
-            cin >> Number;
-         }
-      }
-      return Number;
-}
 int fillRandNumber(int From, int To)
 {
       int randomNumber = rand() % (To - From + 1) + From;
