@@ -19,7 +19,7 @@ void readArrayElements(int& arrLength, int arr[])
     }
    }
    
-void countOddNumbers( int arr[], int arrLength,bool isPossitiveNumber[],int &Counter)
+void countPositiveNumbers( int arr[], int arrLength,bool isPossitiveNumber[],int &Counter)
 {
     for (int i = 0; i < arrLength; i++)
     {
@@ -41,14 +41,14 @@ void countOddNumbers( int arr[], int arrLength,bool isPossitiveNumber[],int &Cou
    }
    
 int main() {
-    srand((unsigned)time(NULL));
-    int arr[100], arrLength,Counter = 0;
-    bool Answer[100];
-    arrLength = readNumber("Enter A Number Of Array Length");
-    readArrayElements(arrLength, arr);
-    isPossitiveNumber(arr,arrLength,Answer); 
-    countOddNumbers(arr, arrLength,Answer,Counter);
-    cout << endl;
-    cout << "count of positive numbers are " << Counter << endl;
+   srand((unsigned)time(NULL));
+   int arr[100], arrLength,Counter = 0;
+   bool Answer[100];
+   arrLength = readNumber("Enter A Number Of Array Length");
+   readArrayElements(arrLength, arr);
+   isPossitiveNumber(arr,arrLength,Answer); 
+   countPositiveNumbers(arr, arrLength,Answer,Counter);
+   cout << endl;
+   cout << "count of positive numbers are " << Counter << endl;
    system("pause");
 }

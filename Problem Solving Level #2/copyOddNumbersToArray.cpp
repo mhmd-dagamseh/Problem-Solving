@@ -29,16 +29,9 @@ void copyOnlyOddNumbers(int arr2[], int arr[], int arrLength,bool isOdd[],int &C
       }
       
    }
-   void isOdd(int arr[],int arrLength,bool Answer[]) 
-   {
-      for (int i = 0;i < arrLength ; i++) 
-      {
-         if ((arr[i] % 2) == 1) 
-         Answer[i] = true;
-         else 
-         Answer[i] = false;
-      }
-   }
+   
+   
+   
    
 int main() {
     srand((unsigned)time(NULL));
