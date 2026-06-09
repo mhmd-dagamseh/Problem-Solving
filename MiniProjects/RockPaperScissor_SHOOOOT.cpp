@@ -116,20 +116,17 @@ void gameOver(stGameRound& Round, stPlayer& Player)
 }
 
 
-stPlayer gameJury(stPlayer& Player) {
+void gameJury(stPlayer& Player) {
     if (Player.winning > Player.loss) {
         Player.playerStatus = enGameWinner::Player;
-        return Player;
     }
 
     else if (Player.winning < Player.loss) {
         Player.playerStatus = enGameWinner::Computer;
-        return Player;
     }
 
     else if (Player.winning == Player.loss) {
         Player.playerStatus = enGameWinner::Draw;
-        return Player;
     }
 
 }
